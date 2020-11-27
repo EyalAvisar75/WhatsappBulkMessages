@@ -102,10 +102,14 @@ def write_message_to_contact():
                 break
         else: break
 
-browser = create_browser()
-enter_whatsapp(browser)
-enter_QRCode()
 
-while True:
-    write_message_to_contact()
-    search_contact_and_send_message(browser)
+def run_whatsapp_bulk_messaging():
+    browser = create_browser()
+    enter_whatsapp(browser)
+    enter_QRCode()
+    while True:
+        write_message_to_contact()
+        search_contact_and_send_message(browser)
+
+
+run_whatsapp_bulk_messaging()
